@@ -1,0 +1,30 @@
+# Entornos virtuales
+venv/
+venv311/
+.venv/
+*.egg-info/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Datos de participantes (NUNCA al repositorio — datos sensibles)
+datos/
+
+# Backups locales
+diseño_mascota_backup/
+normalizar_estimulos.py
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+*.swp
+
+# PsychoPy
+*.log
+lastrun.py

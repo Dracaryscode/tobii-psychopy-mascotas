@@ -55,4 +55,4 @@ python run.py ordenes --semilla 123       # muestra los órdenes que tocarían c
 | 5. Tobii con TittaPy: calibración, control de fijación, eventos, muestras. T3 | Pendiente |
 | 6. Pruebas en el laboratorio: 2, 3, 8, 9, 15 | Pendiente |
 
-El código del diseño anterior (T1/T2) está en la etiqueta `legacy-T1-T2`.
+El código del diseño anterior (T1/T2) está en la rama `legacy-T1-T2`.

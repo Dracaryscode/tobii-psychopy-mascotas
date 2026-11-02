@@ -1,10 +1,7 @@
-# Presentación del experimento + grabación Tobii Pro Fusion
+# Núcleo (preparación, aleatorización, registro y tests): no necesita PsychoPy
+pyyaml>=6.0
+pytest>=7.0
+
+# Presentación y eye tracker (fases con pantalla; siguientes pasos del plan)
 psychopy>=2024.1.0
-tobii-research>=1.11        # Tobii Pro SDK para Python (necesario para el Fusion)
-
-# Utilidades
-pillow>=10.0               # generar placeholders de estímulos
-pytest>=7.0                # pruebas de la secuencia
-
-# Nota: la SIMULACIÓN (run_simulacion.py) y los tests NO requieren psychopy ni
-# tobii-research; sólo necesitan la librería estándar de Python.
+TittaPy>=1.0              # Tobii Pro Fusion (sustituye a ioHub)

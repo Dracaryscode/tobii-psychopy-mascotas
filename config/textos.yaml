@@ -1,0 +1,56 @@
+# Textos para el participante (documento maestro F10, §7 y Anexo D).
+#
+# Los enunciados de los ítems son definitivos [D]: se reproducen literalmente.
+# Las instrucciones son borradores [P] pendientes de aprobación de la investigadora.
+# Ningún texto debe mencionar los ojos, el cuerpo ni las diferencias entre imágenes.
+
+instrucciones:
+  general: >-
+    Gracias por participar. En esta tarea verás personajes ilustrados y
+    responderás algunas preguntas sobre ellos. No hay respuestas correctas ni
+    incorrectas: nos interesa tu impresión. La tarea dura alrededor de 25
+    minutos e incluye pausas breves.
+  practica: "Primero harás unos ensayos de práctica para conocer la tarea."
+  practica_bloque: "Primero harás unos ensayos de práctica de esta parte."
+  calibracion: >-
+    Ahora ajustaremos el equipo que registra hacia dónde miras. Apoya la
+    barbilla en el soporte, mantén la cabeza quieta y sigue con la mirada el
+    punto que aparecerá en la pantalla.
+  fase1: >-
+    Verás dos personajes, uno a cada lado de la pantalla. Antes de cada par
+    aparecerá una cruz en el centro: mírala hasta que aparezcan los personajes.
+    Obsérvalos con naturalidad. Después aparecerá una pregunta; respóndela con
+    la flecha izquierda (←) o derecha (→).
+  fase2: >-
+    Ahora verás los personajes de uno en uno. Para cada uno, responde la
+    pregunta con la escala del 1 al 7.
+  fase3: >-
+    De nuevo verás los personajes de uno en uno. Para cada uno responderás dos
+    preguntas.
+  fase4: "Por último, para cada personaje, responde la siguiente pregunta."
+  pausa: "Puedes descansar unos segundos. Pulsa la barra espaciadora cuando quieras continuar."
+  continuar: "Pulsa la barra espaciadora para continuar."
+  recordatorio_teclas_duelo: "←  /  →"
+  fin: "Muchas gracias por tu participación."
+
+items:
+  eleccion:
+    pregunta: "¿Cuál te parece más tierno?"            # [D]
+  ternura:
+    pregunta: "¿Qué tan tierno te parece este personaje?"  # [D] fijado el 27-10-2026
+    ancla_min: "Nada tierno"                            # [P]
+    ancla_max: "Muy tierno"                             # [P]
+  agrado:
+    pregunta: "¿Cuánto te gusta este personaje?"        # [D]
+    ancla_min: "No me gusta nada"                       # [P]
+    ancla_max: "Me gusta mucho"                         # [P]
+  edad:
+    pregunta: "¿Qué edad aparenta este personaje?"      # [P] enunciado por defecto
+    ancla_min: "Cría"                                   # [D]
+    ancla_max: "Adulto"                                 # [D]
+  extraneza:
+    pregunta: "¿Qué tan raro o inquietante te parece este personaje?"  # [D]
+    ancla_min: "Nada raro o inquietante"                # [P]
+    ancla_max: "Muy raro o inquietante"                 # [P]
+  abierta_cierre:
+    pregunta: "¿Notaste algo especial en los personajes? ¿En qué se diferenciaban?"  # [D]

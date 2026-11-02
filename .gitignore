@@ -13,9 +13,16 @@ __pycache__/
 # Datos de participantes (NUNCA al repositorio — datos sensibles)
 datos/
 
+# Estímulos: no se versionan. Se copian a mano desde la carpeta de la
+# investigadora (F12_estimulos_finales_v5) y se verifican con el manifiesto.
+estimulos/experimentales/*
+estimulos/practica/*
+!estimulos/**/.gitkeep
+
 # Backups locales
 diseño_mascota_backup/
 normalizar_estimulos.py
+*.json.tmp
 
 # Sistema
 .DS_Store

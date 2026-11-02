@@ -1,0 +1,31 @@
+# Datos personales del cierre (F10 §7.9).
+# Los temas son [D]; el texto exacto y las opciones están pendientes [X]
+# y los entrega la investigadora. Mientras tanto, estos son marcadores.
+
+pendiente: true
+preguntas:
+  - id: edad
+    texto: "[X] Edad"
+    tipo: numero
+  - id: genero
+    texto: "[X] Género"
+    tipo: opciones
+    opciones: []
+  - id: convivencia_gatos
+    texto: "[X] Convivencia con gatos"
+    tipo: opciones
+    opciones: []
+  - id: actitud_gatos
+    texto: "[X] Actitud hacia los gatos"
+    tipo: escala
+  - id: familiaridad_estilo
+    texto: "[X] Familiaridad con este estilo de dibujo"
+    tipo: escala
+  - id: lateralidad
+    texto: "[X] Lateralidad manual"
+    tipo: opciones
+    opciones: []
+
+consentimiento:
+  modo: "papel"   # [X] "papel" o "digital", según el comité de ética
+  texto_confirmacion: "[X] La persona participante firmó el consentimiento."

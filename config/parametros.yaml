@@ -1,0 +1,106 @@
+# Parámetros de la tarea (documento maestro F10, Tabla 9).
+#
+# Estado de cada valor:
+#   [D] decidido: no se cambia sin autorización de la investigadora.
+#   [P] provisional: valor por defecto, se puede ajustar aquí.
+#   [X] pendiente: falta un dato; se usa el supuesto de trabajo.
+#
+# Todo lo que dependa del equipo real (monitor, distancia) se ajusta aquí,
+# nunca en el código.
+
+version_parametros: "F10-v1.0"
+
+pantalla:
+  ancho_px: 1920              # [X] O10, supuesto de trabajo
+  alto_px: 1080               # [X] O10, supuesto de trabajo
+  refresco_hz: null           # [X] O10, por confirmar con el monitor real
+  tamano_pixel_mm: 0.275      # [P]
+  distancia_vision_mm: 600    # [P]
+  color_fondo: "#FFFFFF"      # [D]
+  pantalla_completa: true     # [P]
+
+estimulos:
+  carpeta_experimentales: "estimulos/experimentales"
+  carpeta_practica: "estimulos/practica"
+  manifiesto: "estimulos/experimentales/estimulos_manifiesto.csv"
+  verificar_sha256: true      # [P] activada por defecto
+  h_px: 370                   # [P] / [X] O10
+  lienzo_ancho_px: 592        # [P] = 1,6 · h_px
+  lienzo_alto_px: 1073        # [P] = 2,9 · h_px
+  ensayos_fase1: "diseno/ensayos_fase1.csv"   # Anexo B; idénticos y rellenos [P]
+
+practica:
+  # Decisión del 2-11-2026 (amplía F10 §7.2): una práctica antes de cada bloque,
+  # con la misma estructura que el bloque y sin imágenes experimentales.
+  imagenes: ["MCpractica_conejo_lisa_v5.png", "MCpractica_conejo_rayas_v5.png"]
+  antes_de_calibracion: true  # [P] la práctica de duelos va antes de la fase 0
+  duelos:
+    activa: true
+    # Cada duelo: [imagen izquierda, imagen derecha]
+    ensayos:
+      - ["MCpractica_conejo_lisa_v5.png", "MCpractica_conejo_rayas_v5.png"]
+      - ["MCpractica_conejo_rayas_v5.png", "MCpractica_conejo_lisa_v5.png"]
+  ternura:
+    activa: true
+    imagenes: ["MCpractica_conejo_lisa_v5.png", "MCpractica_conejo_rayas_v5.png"]
+  agrado_edad:
+    activa: true
+    imagenes: ["MCpractica_conejo_rayas_v5.png", "MCpractica_conejo_lisa_v5.png"]
+  extraneza:
+    activa: true
+    imagenes: ["MCpractica_conejo_lisa_v5.png", "MCpractica_conejo_rayas_v5.png"]
+
+calibracion:
+  puntos: 9                   # [D] entre 5 y 9
+  criterio_error_medio_grados: 1.0   # [D]
+  intentos: 2                 # [P]
+
+duelos:
+  cruz_tamano_px: 30          # [P]
+  cruz_trazo_px: 3            # [P]
+  cruz_color: "#000000"       # [P]
+  cruz_altura: "pupilas_base" # [P] "pupilas_base" o "centro_pantalla"
+  fijacion_ms: 500            # [P] tiempo dentro del radio para dar la fijación por buena
+  fijacion_radio_grados: 1.5  # [P]
+  fijacion_max_ms: 5000       # [P] por intento
+  fijacion_fallos_para_recalibrar: 3  # [P]
+  cruz_sin_eye_tracker_ms: 1000       # [P] modo prueba o sin datos oculares
+  ventana_observacion_ms: 5000        # [P] / [X] O2; igual en todos los ensayos [D]
+  respuestas_en_ventana: "ignorar_y_registrar"  # [P]
+  imagenes_visibles_en_respuesta: true          # [P]
+  tecla_izquierda: "left"     # [P]
+  tecla_derecha: "right"      # [P]
+  limite_respuesta_ms: null   # [P] sin límite
+  iti_min_ms: 500             # [P] uniforme
+  iti_max_ms: 1000            # [P]
+  # Posición de los lienzos [P]: centros a ± separacion del centro horizontal.
+  separacion_centros_px: 480
+  borde_superior_px: 3
+  subbloque_mirada_sin_pregunta: false   # [X] O2, previsto pero desactivado
+  max_intentos_aleatorizacion: 10000     # [P] límite del muestreo con rechazo
+  max_racha_misma_identidad: 3           # [D] §8.1
+
+valoraciones:
+  escala_min: 1               # [D]
+  escala_max: 7               # [D]
+  respuesta: ["clic", "teclas"]   # [P]
+  imagen_visible_hasta_respuesta: true   # [P]
+  intervalo_ms: 500           # [P]
+  lienzo_centro_x_px: 640     # [P] misma disposición en las fases 2, 3 y 4
+  lienzo_borde_superior_px: 3 # [P]
+  contrabalancear_agrado_edad: false     # [D] fijo / [P] opción prevista
+
+pausas:
+  tecla_continuar: "space"    # [P]
+  minimo_ms: 0                # [P] sin mínimo
+
+aoi:
+  franja_central_grados: 1.5  # [P] a cada lado del centro
+  radio_ojos_uc: 0.195        # [D]
+
+calidad:
+  pct_muestras_validas_ensayo: 50       # [P]
+  pct_ensayos_validos_participante: 60  # [P]
+
+datos:
+  carpeta: "datos"
